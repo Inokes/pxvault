@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pxvault</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body class="fade-init">
+
+<div id="loading-screen">
+  <div class="loader">
+    <div class="spinner"></div>
+    <p>loading content...</p>
+  </div>
+</div>
+
+<div id="rofi-overlay" class="rofi-hidden">
+  <div class="rofi-box">
+    <input type="text" id="rofi-search" placeholder="search..." autocomplete="off">
+    <ul id="rofi-results"></ul>
+  </div>
+</div>
+
+<header class="topbar">
+
+  <div class="profile-wrapper">
+    <img src="assets/profile.png" id="profile-pic">
+    <div class="profile-links" id="profile-menu">
+      <a data-route="home">home</a>
+      <a data-route="about">about me</a>
+      <a data-route="contact">contact</a>
+      <a data-route="interests">interests</a>
+      <a href="https://old.pxvault.site" target="_blank">old website</a>
+    </div>
+  </div>
+
+  <button id="rofi-open" class="rofi-btn">
+    search
+  </button>
+
+</header>
+
+<div class="container">
+  <main class="main-content">
+    <article id="markdown-content">
+      <h2>welcome!</h2>
+      <p>this is my little internet hideout.<br> here, i say what bothers me in life because that's all i can do. lmao</p>
+    </article>
+  </main>
+</div>
+
+<footer class="footer">
+  <span>nico my pookie bear <3 :3</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="scripts/app.js"></script>
+
+</body>
+</html>
