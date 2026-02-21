@@ -297,3 +297,23 @@ body {
   color: #b8bb26;
   font-weight: 500;
 }
+
+/* ============================= */
+/* conway background */
+/* ============================= */
+
+#bg-life {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #32302f; /* base00 */
+}
+
+/* ensure content sits above canvas */
+body {
+  position: relative;
+  z-index: 1;
+}
