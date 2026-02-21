@@ -155,6 +155,38 @@ class MarkdownApp {
   }
 }
 
+class ReviewSlider {
+    constructor() {
+        this.track = document.getElementById("reviews-track");
+        this.slides = document.querySelectorAll(".review");
+        this.index = 0;
+        this.total = this.slides.length;
+        this.start();
+    }
+
+    next() {
+        this.index = (this.index + 1) % this.total;
+        this.track.style.transform = `translateX(-${this.index * 100}%)`;
+    }
+
+    start() {
+        setInterval(() => this.next(), 4000);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    new ReviewSlider();
+});
+
+const totalImages = 9;
+
+function setRandomProfilePicture() {
+  const img = document.getElementById("profile-pic");
+  const random = Math.floor(Math.random() * totalImages + 1);
+  img.src = `assets/p${random}.png`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setRandomProfilePicture();
   new MarkdownApp().init();
 });
